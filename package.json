@@ -1,0 +1,11 @@
+{
+  "name": "nasa-apod",
+  "version": "1.0.0",
+  "description": "Random NASA Astronomy Picture of the Day slideshow",
+  "scripts": {
+    "start": "light-server --serve site"
+  },
+  "devDependencies": {
+    "light-server": "^2.9.1"
+  }
+}

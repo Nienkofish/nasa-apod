@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Pictures</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-heading">
+      <h1>Space Pictures</h1>
+      <p>NASA's Astronomy Picture of the Day</p>
+    </div>
+
+    <!-- Filters -->
+    <form id="filters" class="filters" aria-label="Filters">
+      <div class="filter">
+        <div class="filter-label">
+          <label for="year-from">Years</label>
+          <output id="year-output">1995 to 2026</output>
+        </div>
+        <div id="year-range" class="range">
+          <input id="year-from" type="range" min="1995" max="2026" value="1995" aria-label="From year">
+          <input id="year-to" type="range" min="1995" max="2026" value="2026" aria-label="To year">
+        </div>
+      </div>
+
+      <div class="filter">
+        <div class="filter-label">
+          <label for="pick-date">Pick a date</label>
+          <button id="clear-date" class="clear-date" type="button" hidden>Random</button>
+        </div>
+        <input id="pick-date" class="date-input" type="date" min="1995-06-16">
+      </div>
+    </form>
+  </header>
+
+  <!-- Main content -->
+  <main class="apod">
+
+    <article class="apod-card">
+
+      <!-- Photo -->
+      <figure class="apod-media">
+        <img id="apod-image" src="" alt="">
+        <iframe id="apod-iframe" title="Video of the day" allow="fullscreen; picture-in-picture" allowfullscreen hidden></iframe>
+        <video id="apod-video" controls playsinline hidden></video>
+        <figcaption id="apod-status" class="apod-status">Loading…</figcaption>
+      </figure>
+
+      <!-- Details -->
+      <section class="apod-info">
+        <time id="apod-date" class="apod-date"></time>
+        <h2 id="apod-title" class="apod-title"></h2>
+        <p id="apod-credit" class="apod-credit"></p>
+        <p id="apod-explanation" class="apod-explanation"></p>
+
+        <!-- Controls -->
+        <nav class="apod-controls" aria-label="controls">
+          <button id="prev-btn" type="button" hidden>Previous day</button>
+          <button id="pause-btn" type="button">Pause</button>
+          <button id="next-btn" type="button">Next picture</button>
+        </nav>
+
+        <div class="apod-progress">
+          <span id="progress-bar"></span>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Pictures and text from NASA's Astronomy Picture of the Day</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
